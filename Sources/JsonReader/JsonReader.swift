@@ -13,7 +13,7 @@ public class JsonReader {
      - Returns: data content
      - Throws: reading error
      */
-    static func read<T>(_ type: T.Type, fromFile path: String) throws -> T where T: Decodable {
+    public static func read<T>(_ type: T.Type, fromFile path: String) throws -> T where T: Decodable {
         let rawString = try String(contentsOfFile: path, encoding: .utf8)
         let data = rawString.data(using: .utf8)
         return try JSONDecoder().decode(type, from: data!)

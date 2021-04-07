@@ -3,7 +3,7 @@ import Foundation
 /**
  JSON reader tool
  */
-class JsonReader {
+open class JsonReader {
 
     /**
      Reads the JSON file
